@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="govSuite"  parallel="tests" thread-count="5">
+    <test name="govTest1" preserve-order="true" >
+        <classes>
+            <class name="com.test.govTest.loginTest">
+            <methods>
+                <!--只执行下面提到的一个方法 顺序也依赖于这一顺序？-->
+                <include name="testTitle"></include>
+                <include name="testLogin"></include>
+            </methods>
+            </class>
+
+            <!--            <parameter name="url" value="https://www.baidu.com/"></parameter>-->
+<!--            <parameter name="browser" value="Chrome"></parameter>-->
+        </classes>
+        <!--用reportNG生成测试报告-->
+        <listeners>
+            <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        </listeners>
+    </test>
+
+<!--    <test name="govTest2" preserve-order="true" >-->
+<!--        <classes>-->
+<!--            <class name="com.test.govTest.loginTest"/>-->
+<!--            <parameter name="url" value="https://www.baidu.com/"></parameter>-->
+<!--            <parameter name="browser" value="Chrome"></parameter>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
