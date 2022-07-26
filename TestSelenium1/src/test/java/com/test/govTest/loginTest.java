@@ -31,8 +31,8 @@ public class loginTest {
 
 
    //@BeforeTest  //将会在并行的第一个Test方法执行之前运行
-    //@BeforeMethod   //将会在当前测试类的每一个Test方法执行之前运行
-    @BeforeClass  //将会在当前类第一个测试方法之前执行
+    @BeforeMethod   //将会在当前测试类的每一个Test方法执行之前运行
+    //@BeforeClass  //将会在当前类第一个测试方法之前执行
     public void beforeTest(){
         //设置驱动文件路径
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
